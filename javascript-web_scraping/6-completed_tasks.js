@@ -18,6 +18,7 @@ function getCompletedTasksByUser(apiUrl) {
 				const tasksData = JSON.parse(body);
 				const completedTasks = tasksData.filter((task) => task.completed);
 				const completedTasksByUser = completedTasks.reduce((acc, task) => {
+
 					acc[task.userId] = (acc[task.userId] || 0) + 1;
 					return acc;
 				}, {});
@@ -31,12 +32,12 @@ function getCompletedTasksByUser(apiUrl) {
 	});
 }
 
-
 if (process.argv.length !== 3) {
 
 	console.error('Usage: ./6-completed_tasks.js <api-url>');
 	process.exit(1);
 }
+
 
 const apiUrl = process.argv[2];
 

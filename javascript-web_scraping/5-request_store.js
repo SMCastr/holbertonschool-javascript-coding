@@ -15,11 +15,13 @@ function requestAndStore(url, filePath) {
 
 	request.get(url, (error, response, body) => {
 		if (error) {
+
 			console.error(error);
 		} else {
 
 			fs.writeFile(filePath, body, 'utf-8', (writeError) => {
 				if (writeError) {
+
 					console.error(writeError);
 				}
 			});
