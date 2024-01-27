@@ -3,8 +3,8 @@
 const fs = require('fs');
 
 /**
- * readFileContent - Lee e imprime el contenido de un archivo.
- * @param {string} filePath - La ruta del archivo.
+ * readFileContent - Reads and prints the content of a file.
+ * @param {string} filePath - The file path.
  */
 function readFileContent(filePath) {
   fs.readFile(filePath, 'utf-8', (error, data) => {
