@@ -10,20 +10,20 @@ const str = process.argv[3];
  * @param {string} content - The string to write to the file.
  */
 function writeToFile(filePath, content) {
-  // Write the content to the file in utf-8
-  fs.writeFile(filePath, content, "utf-8", (error) => {
-    if (error) {
-      // If an error occurred during writing, print the error object
-      console.error(error);
-    }
-  });
+	// Write the content to the file in utf-8
+	fs.writeFile(filePath, content, "utf-8", (error) => {
+		if (error) {
+			// If an error occurred during writing, print the error object
+			console.error(error);
+		}
+	});
 }
 
 // Check if the correct number of command line arguments is provided
 if (process.argv.length !== 4) {
-  // If not, print an error message and exit
-  console.error("Usage: ./1-writeme.js <file-path> <content>");
-  process.exit(1);
+	// If not, print an error message and exit
+	console.error("Usage: ./1-writeme.js <file-path> <content>");
+	process.exit(1);
 }
 
 // Get the file path and content from the command line arguments
