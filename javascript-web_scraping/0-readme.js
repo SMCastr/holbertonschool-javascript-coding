@@ -1,12 +1,11 @@
 #!/usr/bin/node
 
-const fs = require('fs');
+import fs from 'fs';
 
 /**
  * readFileContent - Reads and prints the content of a file.
  * @param {string} filePath - The file path.
  */
-
 function readFileContent(filePath) {
   fs.readFile(filePath, 'utf-8', (error, data) => {
     if (error) {
@@ -22,8 +21,7 @@ if (process.argv.length !== 3) {
   process.exit(1);
 }
 
-
 const filePath = process.argv[2];
 
-
 readFileContent(filePath);
+
